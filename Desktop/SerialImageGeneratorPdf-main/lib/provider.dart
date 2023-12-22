@@ -6,24 +6,30 @@ class AppProvider extends ChangeNotifier {
   AppProvider._();
   int serialCount = 10;
   double ratio = 1;
-  int _serialNumber = 20000;
+  int _serialNumber = 00001;
+  int serialLength = 5;
   void updateRatio(double ratio) {
     this.ratio = ratio;
     notifyListeners();
   }
 
   updateSerialNumber(int number) {
-    _serialNumber=_serialNumber+number;
+    _serialNumber = _serialNumber + number;
     notifyListeners();
   }
-void updateSirealCount(int number){
-  serialCount=number;
-  notifyListeners();
-}
-  setSerial(int serial) {
-    _serialNumber = serial;
+
+  void updateSirealCount(int number) {
+    serialCount = number;
     notifyListeners();
   }
+
+  setSerial(String serial) {
+    _serialNumber = int.tryParse(serial) ?? 0;
+    serialLength = serial.length;
+
+    notifyListeners();
+  }
+
   setCount(int count) {
     serialCount = count;
     notifyListeners();
@@ -38,8 +44,7 @@ void updateSirealCount(int number){
     style = TextStyle(
         color: color ?? style.color,
         fontSize: fontSize ?? style.fontSize,
-        fontWeight: fontWight ??style.fontWeight
-           );
+        fontWeight: fontWight ?? style.fontWeight);
     notifyListeners();
   }
 }

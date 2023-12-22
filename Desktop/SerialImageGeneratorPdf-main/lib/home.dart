@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                                                   });
                                                 },
                                                 child: Text(
-                                                  e.text,
+                                                  e.text.padLeft(provider.serialLength,"0"),
                                                   style: provider.style,
                                                 ),
                                               ));
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                                                     });
                                                   },
                                                   child: Text(
-                                                    e.text,
+                                                    e.text.padLeft(provider.serialLength,"0"),
                                                     style: provider.style,
                                                   ),
                                                 ));

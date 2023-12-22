@@ -35,7 +35,7 @@ class SideBar extends StatelessWidget {
                   child: TextFormField(
                     onChanged: (value) {
                       if (value.isEmpty) value = '0';
-                      provider.setSerial(int.parse(value));
+                      provider.setSerial(value);
                     },
                     decoration: InputDecoration(
                         hintText: provider.serial.toString(),
