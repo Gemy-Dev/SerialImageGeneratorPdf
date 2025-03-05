@@ -47,8 +47,7 @@ This app is built using **Flutter** and leverages the following packages:
     git clone https://github.com/Gemy-Dev/SerialImageGeneratorPdf.git
     ```
 2. Navigate into the project folder:
-  
-    ```
+  and 
 3. Install dependencies:
     ```bash
     flutter pub get
